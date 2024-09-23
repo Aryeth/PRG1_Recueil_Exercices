@@ -21,7 +21,7 @@ int main() {
    return EXIT_SUCCESS;
 }
 ~~~
-
+*solution* outofbounds -> 3
 <details>
 <summary>Solution</summary>
 Le programme s'arrête quand i vaut 3

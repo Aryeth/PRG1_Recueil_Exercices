@@ -13,7 +13,7 @@ int main() {
    cout << "hello" << endl;
 }
 ~~~
-
+*solution* : ne compile pas parce que pas vraiment foufou d'écrire sur nullptr
 <details>
 <summary>Solution</summary>
 

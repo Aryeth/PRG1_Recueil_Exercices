@@ -12,6 +12,19 @@ int Main()
    Return;
 end;
 ~~~
+*Solution*
+~~~cpp
+include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main(){
+   cout << "Hello" << endln;
+   return EXIT_SUCCESS;
+}
+~~~
+
+
 
 <details>
 <summary>Solution</summary>

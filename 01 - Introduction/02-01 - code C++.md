@@ -2,15 +2,15 @@
 
 Dans le code ci-dessous, à quoi servent les différentes parties numérotées
 ~~~cpp
-#include <iostream>                         // 1
+#include <iostream>                         // 1 import des librairies
 #include <cstdlib>
-using namespace std;                        // 2
+using namespace std;                        // 2 enlever la necessiter d'écrire std::cout
 
-int main()                                  // 3
-{                                           // 4
-    cout << "Hello world"       << endl;    // 5
+int main()                                  // 3 appel de main
+{                                           // 4 corps de main
+    cout << "Hello world"       << endl;    // 5 impression terminal
     cout << "fin de programme"  << endl;
-    return EXIT_SUCCESS;                    // 6
+    return EXIT_SUCCESS;                    // 6 indique le statut d'exec. du programme
 }                                           // 4
 ~~~
 
