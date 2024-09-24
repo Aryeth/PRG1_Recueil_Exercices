@@ -10,6 +10,9 @@ project(PRG1_Recueil_Exercices)
 
 set(CMAKE_CXX_STANDARD 20)
 
+# Compilation options for warnings and errors
+add_compile_options(-Wall -Wextra -Wpedantic -g)
+
 # Add each exercise as a separate executable
 add_executable(ex3 "01 - Introduction/ex04.cpp")
 add_executable(ex4 "01 - Introduction/ex04_b.cpp")

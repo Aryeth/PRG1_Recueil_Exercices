@@ -15,17 +15,27 @@ Quel est le résultat d'évaluation des expressions suivantes ? Expliquez votre 
 
 Pour rappel, `' ' < '0' < '9' < 'A' < 'Z' < 'a' < 'z'`
 
-| # | Expréssion | Résultat (true/false) | Explication |
-|---| ---------- | --------------------- | ----------- |
-| 1 | `s1 < s2` | | |
-| 2 | `s1 > s3`  | | |
-| 3 | `s1 < s4`  | | |
-| 4 | `s3 > s5` | | |
-| 5 | `s1 > s6` | | |
+| # | Expression | Résultat (true/false) | Explication                   |
+|---|------------|-----------------------|-------------------------------|
+| 1 | `s1 < s2`  | true                  | 1<2 en char                   |
+| 2 | `s1 > s3`  | true                  | r>d                           |
+| 3 | `s1 < s4`  | false                 | moins de char dans s4         |
+| 4 | `s3 > s5`  | false  X  *true*      | moins de char dans s3 X *l>g* |
+| 5 | `s1 > s6`  | true                  | en ascii p>P                  |
 
 
 
     
+
+
+
+
+
+
+
+
+
+
 
 <details>
 <summary>Solution</summary>

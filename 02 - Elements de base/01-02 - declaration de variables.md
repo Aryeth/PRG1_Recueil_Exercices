@@ -10,6 +10,7 @@ Pour chaque séquence d'instructions suivante, déterminez si elle est correcte 
     n = 1 – 2 * n;
     n = n + 1;
    ~~~
+   correct, n = 0
 
 2.  
     ~~~cpp
@@ -17,29 +18,34 @@ Pour chaque séquence d'instructions suivante, déterminez si elle est correcte 
     n = n + 1;
     int n = 1 – 2 * n;
     ~~~
+   Incorrect double déclaration de n
 3. 
     ~~~cpp
     int n = 1, p = 2;
     n = (n + 1) * (n - k);
     ~~~
+   incorrect, k pas déclaré
 4. 
     ~~~cpp
     int n, m = 0;
     n = 2 * n - 1;
     m = n + 1;
     ~~~
+   correct, m = -1 X incorrect n pas défini
  5. 
     ~~~cpp
     int n = 5, m = 0;
     const int nb_produit = 10;
     m = n * nb_produit - 1;    
     ~~~
+    m = 49
  6. 
     ~~~cpp
     int n = 5, m = 0;
     const int nb_produit = 10;
     m = n * nb_produit--;    
     ~~~
+    correct, m =45 X incorrect car const-- faux
 
 <details>
 <summary>Solution</summary>
