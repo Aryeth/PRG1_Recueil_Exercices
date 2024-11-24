@@ -1,4 +1,7 @@
 //
+// Created by leobe on 25/09/2024.
+//
+//
 // Created by leobe on 24/09/2024.
 // Calculates the volume of a bottle with user input
 //
@@ -26,7 +29,11 @@ int main() {
     cin >> hauteurCone;
     cout << endl << endl;
 
-    volumeTotal = M_PI * rayonCyl1*rayonCyl1 * hauteurCyl1 + rayon;
+    // calculer le volume
+    volumeTotal = (3.1415 * rayonCyl1*rayonCyl1 * hauteurCyl1) + ((rayonCyl1*rayonCyl1+rayonCyl2*rayonCyl2+rayonCyl1*rayonCyl2) * hauteurCone *(3.1415/3)) + (3.1415*rayonCyl2*rayonCyl2*hauteurCyl2);
+    // mettre le volume en litres
+    volumeTotal = volumeTotal / 1000;
 
+    cout << "La contenance de la bouteille est de :" << volumeTotal << " litres.";
     return 0;
 }

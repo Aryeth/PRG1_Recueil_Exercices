@@ -1,4 +1,4 @@
-# Calcul vectoriel
+e# Calcul vectoriel
 
 On décide d'utiliser un tableau de 3 `double` pour représenter un vecteur à 3 dimensions via
 

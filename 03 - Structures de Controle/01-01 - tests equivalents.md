@@ -17,6 +17,7 @@ if (prixActuel < 100) {
    nouveauPrix = prixActuel - 20;
 }
 ~~~
+Non -> 100 different
 
 <details>
 <summary>Solution</summary>
