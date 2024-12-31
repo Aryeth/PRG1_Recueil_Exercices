@@ -1,5 +1,7 @@
 # Parcours d'un tableau
 
+# <span style="color:green">DONE</span>
+
 Indiquer ce que va afficher chacune des séquences d'instructions suivantes :
 
 _Il se peut qu'une séquence provoque une erreur à l'exécution, aie un comportement indéfini ou cause une boucle infinie. Indiquez-le_ 
@@ -59,6 +61,7 @@ for(size_t i = 3; i < a.size(); --i)
 
 ~~~
 4 3 2 1  
+NOTE : erreur ? -- quand i vaut 0 -> -1 -> at(-1) faux
 ~~~
 </details>
 

@@ -1,5 +1,5 @@
-e# Calcul vectoriel
-
+# Calcul vectoriel
+# <span style="color:green">DONE</span>
 On décide d'utiliser un tableau de 3 `double` pour représenter un vecteur à 3 dimensions via
 
 ~~~cpp
