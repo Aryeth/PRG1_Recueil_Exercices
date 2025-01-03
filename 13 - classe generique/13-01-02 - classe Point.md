@@ -1,5 +1,7 @@
 # classe générique Point 
 
+# <span style="color:green">DONE</span>
+
 Sur la base de la classe générique `Coord` de l'exercice [13-01-01 - classe Coord](13-01-01%20-%20classe%20Coord.md) et **sans faire d'héritage**, écrire la classe générique `Point` qui permet d'obtenir le résultat indiqué pour les instructions suivantes.
 
 ~~~cpp

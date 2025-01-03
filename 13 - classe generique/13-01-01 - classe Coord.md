@@ -1,5 +1,7 @@
 # classe générique Coord 
 
+# <span style="color:green">DONE</span>
+
 Ecrire la classe `Coord` qui permet d'obtenir le résultat indiqué pour les instructions suivantes.
 
 ~~~cpp

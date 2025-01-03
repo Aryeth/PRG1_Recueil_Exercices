@@ -1,5 +1,8 @@
 # Type générique - Bataille navale
 
+# <span style="color:orange">terminé mais pas bien compris</span>
+
+
 Nous souhaitons créer une structure pour le développement d'un jeu de bataille navale.
 
 Déclarer les types de données permettant de définir une surface de jeu
