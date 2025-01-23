@@ -1,6 +1,6 @@
 # Point
 
-Modifiez la structure Point de l'exercice [01-01](11-01-01%20Structure%20Point.md) 
+Modifiez la structure Point de l'exercice [01-01](01-01%20Structure%20Point.md) 
 pour mettre en oeuvre une classe Point qui stocke les coordonnées x,y dans des 
 attributs privés. 
 
@@ -8,8 +8,6 @@ Complétez le code suivant afin qu'il s'exécute correctement et affiche le rés
 
 ~~~cpp
 #include <iostream>
-#include <cstdlib>
-#include <utility>
 
 using namespace std;
 

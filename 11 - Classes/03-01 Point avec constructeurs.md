@@ -1,14 +1,12 @@
 # Point avec constructeurs
 
-Modifiez la classe Point de l'exercice [02-01](11-02-01%20Point.md) 
+Modifiez la classe Point de l'exercice [02-01](02-01%20Point.md) 
 pour pouvoir donner une valeur initiale aux points
 
 Complétez le code suivant afin qu'il s'exécute correctement et affiche le résultat ci-après.
 
 ~~~cpp
 #include <iostream>
-#include <cstdlib>
-#include <utility>
 
 using namespace std;
 
@@ -41,8 +39,6 @@ int main() {
 
 ~~~cpp
 #include <iostream>
-#include <cstdlib>
-#include <utility>
 
 using namespace std;
 

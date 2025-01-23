@@ -1,8 +1,6 @@
 # classe générique Point - quadrant 
 
-# <span style="color:green">DONE</span>
-
-Reprendre l'exercice précédant [11-01-02 - classe Point](13-01-02%20-%20classe%20Point.md)
+Reprendre l'exercice précédant [01-02 - classe Point](01-02%20-%20classe%20Point.md)
 
 Soit le dessin
 
