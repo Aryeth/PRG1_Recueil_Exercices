@@ -43,7 +43,7 @@ public :
         return this->mana;
     }
 
-    int getLevel() {
+    int getLevel() const {
         return this->level;
     }
 
@@ -58,7 +58,6 @@ private :
     int level;
     array<skill, 4> skills{};
 };
-
 
 ostream& operator<<(ostream& out, skill display) {
     out << display.key << " " << display.name << " " << display.damage << "dmg" << endl;
@@ -85,7 +84,7 @@ void extractItem(stringstream &ss, T &item) {
 }
 
 vector<Champion> getChamps() {
-    ifstream file("E:/git/PRG1_Recueil_Exercices/13 - classe generique/champ.txt");
+    ifstream file("C:/Users/leobe/CLionProjects/PRG1_Recueil_Exercices/13 - classe generique/champ.txt");
     string line;
     vector<Champion> champions;
 
@@ -110,7 +109,21 @@ vector<Champion> getChamps() {
     return champions;
 }
 
+template <typename T, typename Iterator>
+T sumList(Iterator begin1, Iterator end1) {
+    T result;
+    for(Iterator it = begin1; it!=end1; it++) {
+        result += *it;
+    }
+    return result;
+}
+
 int main() {
+
+    vector a{1,2,3,4,5};
+    cout<<sumList<int>(a.begin, a.end);
+
+
     vector<Champion> pool = getChamps();
 
     for (size_t i = 0; i<pool.size(); i++) {
