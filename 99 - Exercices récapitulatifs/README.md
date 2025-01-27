@@ -57,9 +57,27 @@ l'examen final.
 - **04 - Fonctions**
     - 04-02 - minimum
     - 05-03 - que produisent ces codes
+
+*Notes :*
+- 04-02 : éviter de copier des objets lourds → on renvoye une référence et on utilise les ref
+- 05-03 : pour une fonction récursive, l'appeller dans elle-même est une bonne solution.
+
 - **05 - Flux**
     - 01-01 - ecriture dans un fichier
     - 01-02 - lecture et ajout dans un fichier
+
+*Notes :*
+- 01-01/02 : mode écriture
+          std::ofstream fichier_sortie(nom_fichier, std::ios::app); (append, sans app → overwrite)
+          mode lecture
+          std::ifstream fichier_entree(nom_fichier);
+          → vérifier que le fichier est ouvert if(!ficher_sortie) std::cerr<<"erreur ouverture";
+          → fermer le fichier : fichier_sortie.close
+
+- tous les flags :
+
+![flags]("./fileFlags.PNG")
+
 - **06 - Types arithmétiques et conversions**
     - 02-02 - Plus petit entier non representable
     - 03-02 - Evaluation d'expressions (2)
