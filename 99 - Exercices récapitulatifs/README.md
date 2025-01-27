@@ -76,7 +76,7 @@ l'examen final.
 
 - tous les flags :
 
-![flags]("./fileFlags.PNG")
+![flags](images/fileFlags.PNG)
 
 - **06 - Types arithmétiques et conversions**
     - 02-02 - Plus petit entier non representable
