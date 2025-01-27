@@ -109,20 +109,30 @@ vector<Champion> getChamps() {
     return champions;
 }
 
-template <typename T, typename Iterator>
-T sumList(Iterator begin1, Iterator end1) {
-    T result;
-    for(Iterator it = begin1; it!=end1; it++) {
-        result += *it;
-    }
-    return result;
+//test on iterator templates
+template <typename T, typename it1, typename it2>
+vector<T> concat(it1 begin1, it1 end1, it2 begin2, it2 end2) {
+    vector<T> res;
+    res.insert(res.end(), begin1, end1);
+    res.insert(res.end(),begin2, end2);
+    return res;
 }
 
 int main() {
 
-    vector a{1,2,3,4,5};
-    cout<<sumList<int>(a.begin, a.end);
+    //test on iterator templates
+    /*
+    vector<int> v1{1,2,3,4,5,6};
+    vector<double>v2{4.4,5.5,6.6};
+    vector<char> v3{'a','b','c','d'};
 
+    cout<< "result 1;\n";
+    for(auto r:concat<int>(v1.begin(), v1.end(), v2.begin(),v2.end())) cout<<r<< " ";
+    cout<< "\nresult 2;\n";
+    for(auto r:concat<double>(v1.begin(), v1.end(), v2.begin(),v2.end())) cout<<r<<" ";
+    cout<< "\nresult 3;\n";
+    for(auto r:concat<char>(v1.begin(), v1.end(), v3.begin(),v3.end())) cout<<r<<" ";
+    */
 
     vector<Champion> pool = getChamps();
 
