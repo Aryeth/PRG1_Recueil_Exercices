@@ -15,14 +15,14 @@ cout << "A : i = " << i << " k = " << k << endl;
 
 // i = 2, k = 2
 i = 1; k = ++i;
-// prints : B : i = 1 k = 2
+// prints : B : i = 2 k = 2
 cout << "B : i = " << i << " k = " << k << endl;
 
 
 i = 2; j = 3;
 //k = 2*4 = 8, j = 4 i = 3
 k = i++ * ++j;
-// prints : C : i = 3 j = 4 k = 6
+// prints : C : i = 3 j = 4 k = 8
 cout << "C : i = " << i << " j = " << j << " k = " << k << endl;
 
 
