@@ -82,15 +82,61 @@ l'examen final.
     - 02-02 - Plus petit entier non representable
     - 03-02 - Evaluation d'expressions (2)
     - 04-02 - Conversions implicites
+
+*Notes :*
+- 02-02 : numeric_limits<float>::epsilon() → plus petite valeur positive de float
+            std::numeric_limits<float>::digits → nb de bits dans float
+A FAIRE pour entrainement 0202
+- 03-02 : on peut cast un type t.q. (double) opération → on a un double en sortie.
+- 04-02 : unsigned ne peut pas représenter les nb négatifs → overflow repart à 0, mais signed → indéfini si ovf
+
+- conversion ; certains types peuvent être promus tel que la chart ci-dessous :
+![conversion](images/conversion.PNG)
+Noter que le type de la colonne peut être promu quand il y a une checkmark dans la ligne.
+i.e. char peut promote en tout, alors que short ne sera pas promu en char car il est +grand.
+
 - **07 - Structure_Enum**
     - 01-03 - acces_membres
     - 02-01 - Premiere et derniere lettres
+
+*Notes :*
+- 01-03 : l'operateur . est prioritaire sur le déreferencement
+            on peut faire un pointeur sur un objet
+- 02-01 : std::pair<type1, type2> est une paire de 2 types quelquonques, tableau size2
+
+REVOIR stringview
+
+exemple struct et enum :
+~~~cpp
+struct Coord {
+int x, y, z;
+};
+
+struct Cercle {
+int   rayon;
+Coord centre;
+};
+~~~
+
 - **08 - Chaines de caracteres**
     - 02-01 - string constructeurs
     - 02-02 - string assign append concat
     - 02-03 - string acces et substr
     - 04-01 - string insert replace et erase
     - 04-05 - Remplacer toutes les occurrences
+
+*Notes :*
+- 02-01 : substring : string sub(string1, startIndex, length);
+            un string se termine par '\0' (1 char)
+- 02-02 : substring.assign(string1, startIndex, length);
+          string.assign(5, 'A') → met 5 'A' dans string
+          string.assign("ABCD", 2) → met "AB" dans string (2 → length)
+- 02-03 : s.at(i) → throw exception quand out of bounds -> sinon comme s[i]
+          string str = s.substr(startIndex, length)  → crée un substring de s
+          1 argument : start
+          0 arguments : copie la string
+- 04-01 :
+- 04-05
 - **09 - Tableaux**
     - 01-03 - parcours
     - 01-05 - Boucles sur tableaux
