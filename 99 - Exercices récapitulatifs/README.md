@@ -156,6 +156,13 @@ Coord centre;
     - 05-01 - Tri à bulle
     - 06-01 - Tri par sélection
     - 07-01 - Tri par insertion
+
+*Notes :*
+- 01-03 : iterer sur un tableau → for(auto i : tableau)
+- 01-05 : exemples
+- 02-05 : 
+- 02-09 : pour afficher un élément d'un objet réferé par un pointeur, au lieu de obj.elem on fait ptr->element
+- 04-01 : 
 - **10 - Surcharge et Genericite**
     - 01-03 - surcharge (2 param)
     - 02-02 - minimum
