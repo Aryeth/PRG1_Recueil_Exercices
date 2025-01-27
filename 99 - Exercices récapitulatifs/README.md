@@ -135,8 +135,18 @@ Coord centre;
           string str = s.substr(startIndex, length)  → crée un substring de s
           1 argument : start
           0 arguments : copie la string
-- 04-01 :
-- 04-05
+          s.size() ou s.length() donne la taille de la string s
+- 04-01 : s.insert(insertionIndex, sToInsert, startS, endS)
+          insère sToInsert depuis startS index à endS index; insère a la position insertionIndex.
+          s.replace(pos, len, string)
+          remplace depuis pos, d'une taille len, avec le string. (coupe depuis pos de len, insère le string)
+          si le string est plus petit que len, le string est remis jusqu'a atteindre len minimum.
+          s.erase(pos, len)
+          supprime len charactères depuis pos. si 1 seul param, supprime depuis pos jusqua la fin.
+  - 04-05 : s.find(string, pos) cherche string dans s a partir de pos
+            s.find(string, pos, n) cherche les n premiers chars de string dans s a partir de pos
+            s.find(string) retourne la pos du 1er string trouvé dans s
+
 - **09 - Tableaux**
     - 01-03 - parcours
     - 01-05 - Boucles sur tableaux
