@@ -2,4 +2,4 @@
 
 Les exercices sont organisés par chapitre, et numérotés par section
 
-Il seront rendu disponibles au fur et à mesure du semestre par les professeurs
+Mes notes personnelles pour révision de l'examen sont [dans le readme du 99.](99%20-%20Exercices%20récapitulatifs/README.md)
