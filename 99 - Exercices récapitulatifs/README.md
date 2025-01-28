@@ -160,11 +160,17 @@ Coord centre;
 *Notes :*
 - 01-03 : iterer sur un tableau → for(auto i : tableau)
 - 01-05 : exemples
+
 - 02-05 : 
+
 - 02-09 : pour afficher un élément d'un objet réferé par un pointeur, au lieu de obj.elem on fait ptr->element
+
 - 04-01 : exercice fait
+
 - 05-01 : bubble sort → comparer 2 élements si mauvaise place échanger puis élément suivant
+
 - 06-01 : selSort → prendre le plus petit élément et l'échanger avec la plus petite place + n (n>=0)
+
 - 07-01 : insertSort → comparer la 1ere paire, prendre le plus petit et le stocker
           → remplacer avec le plus grand
           → déplacer t.q. 24551 → 24451 → 23451 (tmp 3)
@@ -178,12 +184,53 @@ Coord centre;
     - 03-05 - surcharge et specialisation
 
 *Notes :*
-- 01-03 :
-![conversion](images/surcharge2.PNG)
-- 02-02 :
-- 02-05 :
+- 01-03 : une conversion de int (NON VARIABLE ex. '1') en const int& est faisable, mais pas int à int& (sinon on modifie l'addresse...)
+![surcharge](images/surcharge2.PNG)
+à noter qu'une conversion de type (explicite ou implicite) peut entraîner une perte d'information.
+si aucune ou plusieurs fonctions sont appellables, il y a ambiguité
+
+IMPORTANT : une promotion reste dans le meme type (ex. de float a double)
+            mais une conversion sort du type d'ensemble (ex. de int a double)
+t.q ces groupes :
+![groups](images/groups.jpg)
+
+Le type d'une variable non déclarée (ex. 2) est const <type>& (int pour type exemple)
+
+- 02-02 : template<typename T> est utile pour les fonctions génériques
+            (exo à refaire si temps)
+
+- 02-05 : quand on fait un template, redéfinir une fonction avec des types permet de ne pas les déduire; i.e.
+~~~cpp
+template <typename R, typename T, typename U>
+R fct(const T& t, const U& u) {
+   return R(t + u);
+}
+
+// overload
+fct<int, double>(i, d);
+~~~
+ici on met R à int, T à double, et U est déduit de d !!
+
+autre exemple :
+
+~~~cpp
+template <typename R, typename T, typename U>
+R fct(const T& t, const U& u) {
+   return R(t + u);
+}
+
+// ne marche pas ! on ne sait pas ce qu'est R
+fct(i, d);
+
+// fonctionne ! on déduit R du type de retour de fct (ici int)
+int fct(i, d);
+~~~
+
+
 - 02-06 :
+
 - 03-02 :
+
 - 03-05 :
 
 - **11 - Classes**
