@@ -236,6 +236,7 @@ en gros la même méthode que pour les surcharge, mais si ambiguité on prend la
 - 03-02 :
 
 - 03-05 :
+exercices a faire
 
 - **11 - Classes**
     - 03-02 Point avec limites de deplacement
@@ -245,10 +246,13 @@ en gros la même méthode que pour les surcharge, mais si ambiguité on prend la
 
 *Notes*
 
-- 03-02 :
-- 03-05 :
-- 04-02 :
-- 06-03 :
+- 03-02 : exercice
+
+- 03-05 : pas compris
+
+- 04-02 : exercice
+
+- 06-03 : exercice
 
 - **12 - iterator - algorithm - numeric**
     - 03-01 - algorithm - sans modification
@@ -257,9 +261,40 @@ en gros la même méthode que pour les surcharge, mais si ambiguité on prend la
 
 *Notes*
 
-- 03-01 :
-- 03-02 :
-- 03-05 :
+- 03-01 : 
+exemple :
+~~~cpp
+template <typename T>
+ostream& operator<< (ostream& os, span<T> s) {
+   os << "[";
+   for (size_t i=0; i<s.size(); ++i) {
+      if (i) os << ", ";
+      os << s[i];
+   }
+   return os << "]";
+}
+
+array  a {1, 2, 3};
+vector v {1, 2, 3, 4, 5, 1, 2, 3, 4};
+
+// no 5
+auto it = search(v.begin() + 1,     v.end(),
+                 a.begin(),         a.end());
+
+cout << distance(v.begin(), it);
+~~~
+Cherchera 1,2,3 dans V depuis la position 1
+"it" sera l'itérateur marquant la position trouvée depuis le début de la recherche
+
+(ici on commence a 1; le 1er 123 n'est pas dans le scope de recherche)
+
+en regardant la distance entre v.begin et it, on trouve la position du début du pattern dans v;
+
+[1, 2, 3] commence donc à v[5]
+
+- 03-02 : exercice
+
+- 03-05 : exercice dur
 
 - **13 - classe generique**
     - 01-02 - classe Point
@@ -270,7 +305,13 @@ en gros la même méthode que pour les surcharge, mais si ambiguité on prend la
 
 *Notes*
 
-- 03-02
+- 01-02 :
+- 01-06 :
+- 01-10 :
+- 02-02 :
+- 03-02 :
+
+*tous des exercices a faire, intéressants pour revoir classes génériques*
 
 - **14 - Gestion des erreurs**
     - 03-01 try-catch
@@ -280,10 +321,34 @@ en gros la même méthode que pour les surcharge, mais si ambiguité on prend la
 
 *Notes*
 
-- 03-01 :
-- 05-01 :
-- 05-02 :
-- 05-03 :
+- 03-01 : Hierarchie des exceptions a retenir
+~~~cpp
+graph TD
+exception(Exception)
+
+bad_alloc(Bad Alloc)
+logic_error(Logic Error)
+invalid_argument(Invalid Argument)
+out_of_range(Out of Range)
+
+runtime_error(Runtime Error)
+overflow_error(Overflow Error)
+range_error(Range Error)
+
+exception     --> bad_alloc
+exception     --> logic_error
+logic_error   --> invalid_argument
+logic_error   --> out_of_range
+exception     --> runtime_error
+runtime_error --> overflow_error
+runtime_error --> range_error
+~~~
+
+- 05-01 : utile pour revoir les try-catch, noter que if(n) avec n entier → n = 0 → false
+
+- 05-02 : comme 05-01
+
+- 05-03 : même chose
 
 - **15 - Allocation dynamique**
     - 01-01 new et delete
@@ -293,6 +358,14 @@ en gros la même méthode que pour les surcharge, mais si ambiguité on prend la
 *Notes*
 
 - 01-01 :
+
+ new : alloue de la mémoire pour un objet ou un array d'objets
+
+ delete : libère la mémoire allouée par new
+
+ Important ! il est de bonne practice de set le pointeur supprimé à nullptr afin de ne pas avoir de problème (accès invalide, double suppression)
 - 01-02 :
+
 - 03-04 :
     
+à revoir, exercices
