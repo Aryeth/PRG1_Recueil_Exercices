@@ -38,14 +38,14 @@ fct(i, c);
 <details>
 <summary>Solution</summary>
 
-1. $S = \left\\{1, 2, 4\right\\}$ sont appelables. 
+1. $S = \left\{1, 2, 4\right\}$ sont appelables. 
    - Pour 3, pas de conversion de `int` vers `float&` ni de `char` vers `int&`. 
 2. Paramètres 
-   - $P_{1} = \left\\{1, 2\right\\}$
+   - $P_{1} = \left\{1, 2\right\}$
      - `i` de type `int` 
      - 1 et 2 par type exact 
 	 - 4 par conversion `int` vers `float`.
-   - $P_{2} = \left\\{4\right\\}$ 
+   - $P_{2} = \left\{4\right\}$ 
      - `c` de type `char`
      - 4 par promotion numérique
      - 1, 2 par conversion de type. 
@@ -62,18 +62,18 @@ fct(2.0, 1);
 <details>
 <summary>Solution</summary>
 
-1. $S = \left\\{1, 2, 4\right\\}$ sont appelables.
+1. $S = \left\{1, 2, 4\right\}$ sont appelables.
 	- Pour 3, pas de conversion de `const double` vers `float&` ni de `const int` vers `int&`.
 2. Paramètres 
-	- $P_{1} = \left\\{1, 2, 4\right\\}$
+	- $P_{1} = \left\{1, 2, 4\right\}$
 		- `2.0` de type `const double`
 		- 1 et 2 par conversion `double` vers `int`.
 		- 4 par conversion `double` vers `float`.
-	- $P_{2} = \left\\{4\right\\}$
+	- $P_{2} = \left\{4\right\}$
 		- `1` de type `const int`
 		- 4 par type exact
 		- 1, 2 par conversion de type.
-3. $P_{1} \cap P_{2} = \left\\{4\right\\}$ 
+3. $P_{1} \cap P_{2} = \left\{4\right\}$ 
 4. **Fonction no 4**
 
 </details>
@@ -86,19 +86,19 @@ fct(i, f);
 <details>
 <summary>Solution</summary>
 
-1. $S = \left\\{1, 2, 4\right\\}$ sont appelables
+1. $S = \left\{1, 2, 4\right\}$ sont appelables
 	- Pour 3, pas de conversion de `int` vers `float&` ni de `float` vers `int&`.
 2. Paramètres 
-	- $P_{1} = \left\\{1, 2\right\\}$
+	- $P_{1} = \left\{1, 2\right\}$
 		- `i` de type `int`
 		- 1 et 2 par type exact
 		- 4 par conversion `int` vers `float`.
-	- $P_{2} = \left\\{1\right\\}$
+	- $P_{2} = \left\{1\right\}$
 		- `1` de type `float`
 		- 1 par type exact
 		- 2 par promotion `float` vers `double`
         - 4 par conversion `float` vers `int`
-3. $P_{1} \cap P_{2} = \left\\{1\right\\}$
+3. $P_{1} \cap P_{2} = \left\{1\right\}$
 4. **Fonction no 1**
 
 </details>
@@ -111,19 +111,19 @@ fct(ri, f);
 <details>
 <summary>Solution</summary>
 
-1. $S = \left\\{1, 2, 4\right\\}$ sont appelables.
+1. $S = \left\{1, 2, 4\right\}$ sont appelables.
 	- Pour 3, pas de conversion de `int&` vers `float&` ni de `float` vers `int&`.
 2. Paramètres
-	- $P_{1} = \left\\{1, 2\right\\}$
+	- $P_{1} = \left\{1, 2\right\}$
 		- `i` de type `int&`
 		- 1 et 2 par type exact et copie par valeur
 		- 4 par conversion `int` vers `float`.
-	- $P_{2} = \left\\{1\right\\}$
+	- $P_{2} = \left\{1\right\}$
 		- `1` de type `float`
 		- 1 par type exact
 		- 2 par promotion `float` vers `double`
 		- 4 par conversion `float` vers `int`
-3. $P_{1} \cap P_{2} = \left\\{1\right\\}$
+3. $P_{1} \cap P_{2} = \left\{1\right\}$
 4. **Fonction no 1**
 
 </details>
@@ -137,18 +137,18 @@ fct(f, 1);
 <summary>Solution</summary>
 
 
-1. $S = \left\\{1, 2, 4\right\\}$ sont appelables.
+1. $S = \left\{1, 2, 4\right\}$ sont appelables.
 	- Pour 3, pas de conversion de `const int` vers `int&`.
 2. Paramètres
-	- $P_{1} = \left\\{4\right\\}$
+	- $P_{1} = \left\{4\right\}$
 		- `i` de type `float&`
 		- 4 par conversion simple `float&` vers `const float&`.
 		- 1 et 2 par conversion de type `float` vers `int` 
-	- $P_{2} = \left\\{4\right\\}$
+	- $P_{2} = \left\{4\right\}$
 		- `1` de type `const int`
 		- 4 par type exact
 		- 1 et 2 par conversion de type `const int` vers `float` et `double` resp.
-3. $P_{1} \cap P_{2} = \left\\{4\right\\}$
+3. $P_{1} \cap P_{2} = \left\{4\right\}$
 4. **Fonction no 4**
 
 </details>
@@ -161,11 +161,11 @@ fct(i, d);
 <details>
 <summary>Solution</summary>
 
-1. $S = \left\\{1, 2, 4\right\\}$ 
+1. $S = \left\{1, 2, 4\right\}$ 
 2. Paramètres
-	- $P_{1} = \left\\{1, 2\right\\}$ par type exact
-    - $P_{2} = \left\\{2\right\\}$ par type exact
-3. $P_{1} \cap P_{2} = \left\\{2\right\\}$
+	- $P_{1} = \left\{1, 2\right\}$ par type exact
+    - $P_{2} = \left\{2\right\}$ par type exact
+3. $P_{1} \cap P_{2} = \left\{2\right\}$
 4. **Fonction no 2**
 
 
@@ -179,11 +179,11 @@ fct(f, i);
 <details>
 <summary>Solution</summary>
 
-1. $S = \left\\{1, 2, 3, 4\right\\}$
+1. $S = \left\{1, 2, 3, 4\right\}$
 2. Paramètres
-	- $P_{1} = \left\\{3\right\\}$ par type exact, 4 requiert une conversion simple -> `const`, 1 et 2 requièrent une conversion de type
-	- $P_{2} = \left\\{3\right\\}$ par type exact
-3. $P_{1} \cap P_{2} = \left\\{3\right\\}$
+	- $P_{1} = \left\{3\right\}$ par type exact, 4 requiert une conversion simple -> `const`, 1 et 2 requièrent une conversion de type
+	- $P_{2} = \left\{3\right\}$ par type exact
+3. $P_{1} \cap P_{2} = \left\{3\right\}$
 4. **Fonction no 3**
 
 </details>
@@ -196,11 +196,11 @@ fct(2.0, i);
 <details>
 <summary>Solution</summary>
 
-1. $S = \left\\{1, 2, 4\right\\}$
+1. $S = \left\{1, 2, 4\right\}$
 2. Paramètres
-	- $P_{1} = \left\\{1, 2, 4\right\\}$ par conversion de type
-	- $P_{2} = \left\\{4\right\\}$ par type conversion simple `int` vers `const int`
-3. $P_{1} \cap P_{2} = \left\\{4\right\\}$
+	- $P_{1} = \left\{1, 2, 4\right\}$ par conversion de type
+	- $P_{2} = \left\{4\right\}$ par type conversion simple `int` vers `const int`
+3. $P_{1} \cap P_{2} = \left\{4\right\}$
 4. **Fonction no 4**
 
 </details>
@@ -213,10 +213,10 @@ fct(2, c);
 <details>
 <summary>Solution</summary>
 
-1. $S = \left\\{1, 2, 4\right\\}$
+1. $S = \left\{1, 2, 4\right\}$
 2. Paramètres
-	- $P_{1} = \left\\{1, 2\right\\}$ par type exact
-	- $P_{2} = \left\\{4\right\\}$ par promotion numérique
+	- $P_{1} = \left\{1, 2\right\}$ par type exact
+	- $P_{2} = \left\{4\right\}$ par promotion numérique
 3. $P_{1} \cap P_{2} = \emptyset$
 4. **ambiguité**
 
@@ -230,10 +230,10 @@ fct(c, 2);
 <details>
 <summary>Solution</summary>
 
-1. $S = \left\\{1, 2, 4\right\\}$
+1. $S = \left\{1, 2, 4\right\}$
 2. Paramètres
-	- $P_{1} = \left\\{1, 2\right\\}$ par promotion numérique
-	- $P_{2} = \left\\{4\right\\}$ par type exact
+	- $P_{1} = \left\{1, 2\right\}$ par promotion numérique
+	- $P_{2} = \left\{4\right\}$ par type exact
 3. $P_{1} \cap P_{2} = \emptyset$
 4. **ambiguité**
 
@@ -247,11 +247,11 @@ fct(rdC, i);
 <details>
 <summary>Solution</summary>
 
-1. $S = \left\\{1, 2, 4\right\\}$
+1. $S = \left\{1, 2, 4\right\}$
 2. Paramètres
-	- $P_{1} = \left\\{1, 2, 4\right\\}$ par conversion de type
-	- $P_{2} = \left\\{4\right\\}$ par conversion simple `int` vers `const int`
-3. $P_{1} \cap P_{2} = \left\\{4\right\\}$
+	- $P_{1} = \left\{1, 2, 4\right\}$ par conversion de type
+	- $P_{2} = \left\{4\right\}$ par conversion simple `int` vers `const int`
+3. $P_{1} \cap P_{2} = \left\{4\right\}$
 4. **Fonction no 4**
 
 </details>
@@ -264,10 +264,10 @@ fct(f, rdC);
 <details>
 <summary>Solution</summary>
 
-1. $S = \left\\{1, 2, 4\right\\}$, 3 sans conversion de `const double&` vers `int&`
+1. $S = \left\{1, 2, 4\right\}$, 3 sans conversion de `const double&` vers `int&`
 2. Paramètres
-	- $P_{1} = \left\\{4\right\\}$ par conversion simple `float` vers `const float`
-	- $P_{2} = \left\\{2\right\\}$ par type exact 
+	- $P_{1} = \left\{4\right\}$ par conversion simple `float` vers `const float`
+	- $P_{2} = \left\{2\right\}$ par type exact 
 3. $P_{1} \cap P_{2} = \emptyset$
 4. **ambiguité**
 
@@ -281,11 +281,11 @@ fct('a', rdC);
 <details>
 <summary>Solution</summary>
 
-1. $S = \left\\{1, 2, 4\right\\}$
+1. $S = \left\{1, 2, 4\right\}$
 2. Paramètres
-	- $P_{1} = \left\\{1, 2\right\\}$ par promotion numérique 
-	- $P_{2} = \left\\{2\right\\}$ par type exact 
-3. $P_{1} \cap P_{2} = \left\\{2\right\\}$
+	- $P_{1} = \left\{1, 2\right\}$ par promotion numérique 
+	- $P_{2} = \left\{2\right\}$ par type exact 
+3. $P_{1} \cap P_{2} = \left\{2\right\}$
 4. **Fonction no 2**
 
 </details>
@@ -298,11 +298,11 @@ fct(2.0, 'a');
 <details>
 <summary>Solution</summary>
 
-1. $S = \left\\{1, 2, 4\right\\}$
+1. $S = \left\{1, 2, 4\right\}$
 2. Paramètres
-	- $P_{1} = \left\\{1, 2, 4\right\\}$ par conversion de type
-	- $P_{2} = \left\\{4\right\\}$ par promotion numérique
-3. $P_{1} \cap P_{2} = \left\\{4\right\\}$
+	- $P_{1} = \left\{1, 2, 4\right\}$ par conversion de type
+	- $P_{2} = \left\{4\right\}$ par promotion numérique
+3. $P_{1} \cap P_{2} = \left\{4\right\}$
 4. **Fonction no 4**
 
 </details>
@@ -315,11 +315,11 @@ fct('a', 2L);
 <details>
 <summary>Solution</summary>
 
-1. $S = \left\\{1, 2, 4\right\\}$
+1. $S = \left\{1, 2, 4\right\}$
 2. Paramètres
-	- $P_{1} = \left\\{1, 2\right\\}$ par promotion numérique
-	- $P_{2} = \left\\{1, 2, 4\right\\}$ par conversion 
-3. $P_{1} \cap P_{2} = \left\\{1, 2\right\\}$
+	- $P_{1} = \left\{1, 2\right\}$ par promotion numérique
+	- $P_{2} = \left\{1, 2, 4\right\}$ par conversion 
+3. $P_{1} \cap P_{2} = \left\{1, 2\right\}$
 4.  **ambiguité**
 
 </details>
@@ -332,11 +332,11 @@ fct('a', 2.0L);
 <details>
 <summary>Solution</summary>
 
-1. $S = \left\\{1, 2, 4\right\\}$
+1. $S = \left\{1, 2, 4\right\}$
 2. Paramètres
-	- $P_{1} = \left\\{1, 2\right\\}$ par promotion numérique `char` -> `int`
-	- $P_{2} = \left\\{1, 2, 4\right\\}$ par conversion `long double` vers ...
-3. $P_{1} \cap P_{2} = \left\\{1, 2\right\\}$
+	- $P_{1} = \left\{1, 2\right\}$ par promotion numérique `char` -> `int`
+	- $P_{2} = \left\{1, 2, 4\right\}$ par conversion `long double` vers ...
+3. $P_{1} \cap P_{2} = \left\{1, 2\right\}$
 4.  **ambiguité**
 
 </details>

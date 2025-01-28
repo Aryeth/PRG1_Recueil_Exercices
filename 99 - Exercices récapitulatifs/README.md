@@ -162,7 +162,13 @@ Coord centre;
 - 01-05 : exemples
 - 02-05 : 
 - 02-09 : pour afficher un élément d'un objet réferé par un pointeur, au lieu de obj.elem on fait ptr->element
-- 04-01 : 
+- 04-01 : exercice fait
+- 05-01 : bubble sort → comparer 2 élements si mauvaise place échanger puis élément suivant
+- 06-01 : selSort → prendre le plus petit élément et l'échanger avec la plus petite place + n (n>=0)
+- 07-01 : insertSort → comparer la 1ere paire, prendre le plus petit et le stocker
+          → remplacer avec le plus grand
+          → déplacer t.q. 24551 → 24451 → 23451 (tmp 3)
+          → répeter jusqu'atteindre l'array trié
 - **10 - Surcharge et Genericite**
     - 01-03 - surcharge (2 param)
     - 02-02 - minimum
@@ -170,6 +176,16 @@ Coord centre;
     - 02-06 - surcharge (3)
     - 03-02 - afficher matrice
     - 03-05 - surcharge et specialisation
+
+*Notes :*
+- 01-03 :
+![conversion](images/surcharge2.PNG)
+- 02-02 :
+- 02-05 :
+- 02-06 :
+- 03-02 :
+- 03-05 :
+
 - **11 - Classes**
     - 03-02 Point avec limites de deplacement
     - 03-05 Trace
