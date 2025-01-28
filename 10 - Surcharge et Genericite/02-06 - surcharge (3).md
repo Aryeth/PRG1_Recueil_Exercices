@@ -48,15 +48,15 @@ fct(pd, d);
 <details>
 <summary>Solution</summary>
 
-1. $S = \left\\{1, 2, 4\right\\}$ sont appelables. 
+1. $S = \left\{1, 2, 4\right\}$ sont appelables. 
    - 3 : types différents déduits pour `T` (`double*` et `double`)
    - 5 : pas de conversion `double*` vers `int`
    - 6 : pas de conversion `double*` vers `int*`
 2. Paramètres 
-   - $P_{1} = \left\\{1, 2, 4\right\\}$ par type exact 
-   - $P_{2} = \left\\{1, 2\right\\}$ par type exact 
+   - $P_{1} = \left\{1, 2, 4\right\}$ par type exact 
+   - $P_{2} = \left\{1, 2\right\}$ par type exact 
      - 4 : conversion `double` vers `int`
-3. $P_{1} \cap P_{2} = \left\\{1, 2\right\\}$ 
+3. $P_{1} \cap P_{2} = \left\{1, 2\right\}$ 
 4. fct no 2 : plus spécialisée que 1, **la fct no 2 est appelée**
 
 --------------------
@@ -71,16 +71,16 @@ fct(c, f);
 <details>
 <summary>Solution</summary>
 
-1. $S = \left\\{1, 4, 5\right\\}$ sont appelables. 
+1. $S = \left\{1, 4, 5\right\}$ sont appelables. 
    - 2 : `T* = char` pas déductible
    - 3 : types différents déduits pour `T` (`char` et `float`)
    - 6 : pas de conversion `char` vers `int*`
 2. Paramètres 
-   - $P_{1} = \left\\{1, 4\right\\}$ par type exact
+   - $P_{1} = \left\{1, 4\right\}$ par type exact
      - 6 par promotion `char` vers `int`
-   - $P_{2} = \left\\{1\right\\}$ par type exact 
+   - $P_{2} = \left\{1\right\}$ par type exact 
      - 4 et 5 par conversion `float` vers `int`
-3. $P_{1} \cap P_{2} = \left\\{1\right\\}$, **la fct no 1 est appelée**
+3. $P_{1} \cap P_{2} = \left\{1\right\}$, **la fct no 1 est appelée**
 
 --------------------
 
@@ -94,15 +94,15 @@ fct(pf, s)
 <details>
 <summary>Solution</summary>
 
-1. $S = \left\\{1, 2, 4\right\\}$ sont appelables. 
+1. $S = \left\{1, 2, 4\right\}$ sont appelables. 
    - 3 : types différents déduits pour `T` (`float*` et `short`)
    - 5 : pas de conversion `float*` vers `int`
    - 6 : pas de conversion `float*` vers `int*`
 2. Paramètres 
-   - $P_{1} = \left\\{1, 2, 4\right\\}$ par type exact
-   - $P_{2} = \left\\{1, 2\right\\}$ par type exact 
+   - $P_{1} = \left\{1, 2, 4\right\}$ par type exact
+   - $P_{2} = \left\{1, 2\right\}$ par type exact 
      - 4 par promotion `short` vers `int`
-3. $P_{1} \cap P_{2} = \left\\{1, 2\right\\}$
+3. $P_{1} \cap P_{2} = \left\{1, 2\right\}$
 4. fct no 2 plus spécialisée que 1, **la fct no 2 est appelée**
 
 --------------------
@@ -127,14 +127,14 @@ fct(pc, pc);
 <details>
 <summary>Solution</summary>
 
-1. $S = \left\\{1, 2, 3\right\\}$ sont appelables. 
+1. $S = \left\{1, 2, 3\right\}$ sont appelables. 
    - 4 : pas de conversion `char*` vers `int`
    - 5 : pas de conversion `char*` vers `int`
    - 6 : pas de conversion `char*` vers `float`
 2. Paramètres 
-   - $P_{1} = \left\\{1, 2, 3\right\\}$ par type exact
-   - $P_{2} = \left\\{1, 2, 3\right\\}$ par type exact 
-3. $P_{1} \cap P_{2} = \left\\{1, 2, 3\right\\}$
+   - $P_{1} = \left\{1, 2, 3\right\}$ par type exact
+   - $P_{2} = \left\{1, 2, 3\right\}$ par type exact 
+3. $P_{1} \cap P_{2} = \left\{1, 2, 3\right\}$
 4. fct no 2 : plus spécialisée que la 1<br>
    fct no 3 : plus spécialisée que la 1<br>
    pas d'ordre de spécialisation entre la 2 et la 3 => **appel ambigu**
@@ -151,14 +151,14 @@ fct(pi, i);
 <details>
 <summary>Solution</summary>
 
-1. $S = \left\\{1, 2, 4, 6\right\\}$ sont appelables. 
+1. $S = \left\{1, 2, 4, 6\right\}$ sont appelables. 
    - 3 : types différents déduits pour `T` (`int*` et `int`)
    - 5 : pas de conversion `int*` vers `int`
 2. Paramètres 
-   - $P_{1} = \left\\{1, 2, 4, 6\right\\}$ par type exact
-   - $P_{2} = \left\\{1, 2, 4\right\\}$ par type exact
+   - $P_{1} = \left\{1, 2, 4, 6\right\}$ par type exact
+   - $P_{2} = \left\{1, 2, 4\right\}$ par type exact
       - 6 par conversion `int` vers `float`
-3. $P_{1} \cap P_{2} = \left\\{1, 2, 4\right\\}$
+3. $P_{1} \cap P_{2} = \left\{1, 2, 4\right\}$
 4. fct no 2 : plus spécialisée que la 1<br>
    fct no 4 : plus spécialisée que la 1<br>
    pas d'ordre de spécialisation entre la 2 et la 4 => **appel ambigu**
@@ -175,15 +175,15 @@ fct(f, f);
 <details>
 <summary>Solution</summary>
 
-1. $S = \left\\{1, 3, 4, 5\right\\}$ sont appelables. 
+1. $S = \left\{1, 3, 4, 5\right\}$ sont appelables. 
    - 2 : Pas de déduction de `T` pour `T* = float`
    - 6 : pas de conversion `float` vers `int*`
 2. Paramètres 
-   - $P_{1} = \left\\{1, 3, 4\right\\}$ par type exact
+   - $P_{1} = \left\{1, 3, 4\right\}$ par type exact
      - 5 requiert une conversion `float` vers `int`
-   - $P_{2} = \left\\{1, 3\right\\}$ par type exact
+   - $P_{2} = \left\{1, 3\right\}$ par type exact
      - 4 et 5 requièrent une conversion `float` vers `int`
-3. $P_{1} \cap P_{2} = \left\\{1, 3\right\\}$
+3. $P_{1} \cap P_{2} = \left\{1, 3\right\}$
 4. fct no 3 : plus spécialisée que la 1 => **la fct no 3 est appelée**
 
 --------------------
@@ -210,15 +210,15 @@ fct(d, i);
 <details>
 <summary>Solution</summary>
 
-1. $S = \left\\{1, 4, 5\right\\}$ sont appelables. 
+1. $S = \left\{1, 4, 5\right\}$ sont appelables. 
    - 2 : `double` n'est pas compatible pour `T*`
    - 3 : types différents déduits pour `T` (`double` et `int`)
    - 6 : pas de conversion de `double` vers `int*`
 2. Paramètres 
-   - $P_{1} = \left\\{1, 4\right\\}$ par type exact
+   - $P_{1} = \left\{1, 4\right\}$ par type exact
      - 5 par conversion 
-   - $P_{2} = \left\\{1, 4, 5\right\\}$ par type exact
-3. $P_{1} \cap P_{2} = \left\\{1, 4\right\\}$
+   - $P_{2} = \left\{1, 4, 5\right\}$ par type exact
+3. $P_{1} \cap P_{2} = \left\{1, 4\right\}$
 4. fct no 4 : plus spécialisée que la 1 => **la fct no 4 est appelée**
 
 --------------------
@@ -233,15 +233,15 @@ fct(c, c);
 <details>
 <summary>Solution</summary>
 
-1. $S = \left\\{1, 3, 4, 5\right\\}$ sont appelables. 
+1. $S = \left\{1, 3, 4, 5\right\}$ sont appelables. 
    - 2 : `char` n'est pas compatible pour `T*`
    - 6 : pas de conversion de `char` vers `int*`
 2. Paramètres 
-   - $P_{1} = \left\\{1, 3, 4\right\\}$ par type exact
+   - $P_{1} = \left\{1, 3, 4\right\}$ par type exact
      - 5 par promotion `char` vers `int`
-   - $P_{2} = \left\\{1, 3\right\\}$ par type exact
+   - $P_{2} = \left\{1, 3\right\}$ par type exact
      - 4 et 5 par promotion `char` vers `int`
-3. $P_{1} \cap P_{2} = \left\\{1, 3\right\\}$
+3. $P_{1} \cap P_{2} = \left\{1, 3\right\}$
 4. fct no 3 : plus spécialisée que la 1 => **la fct no 3 est appelée**
 
 --------------------
@@ -256,16 +256,16 @@ fct(c, s);
 <details>
 <summary>Solution</summary>
 
-1. $S = \left\\{1, 4, 5\right\\}$ sont appelables. 
+1. $S = \left\{1, 4, 5\right\}$ sont appelables. 
    - 2 : Pas de déduction pour `T* = char`
    - 3 : types différents déduits pour `T` (`char` et `short`)
    - 6 : pas de conversion `char` vers `int*`
 2. Paramètres 
-   - $P_{1} = \left\\{1, 4\right\\}$ par type exact
+   - $P_{1} = \left\{1, 4\right\}$ par type exact
      - 5 par promotion `char` vers `int`
-   - $P_{2} = \left\\{1\right\\}$ par type exact
+   - $P_{2} = \left\{1\right\}$ par type exact
      - 4 et 5 par promotion `char` vers `int`
-3. $P_{1} \cap P_{2} = \left\\{1\right\\}$
+3. $P_{1} \cap P_{2} = \left\{1\right\}$
 4. **la fct no 1 est appelée**
 
 --------------------
@@ -280,14 +280,14 @@ fct(pd, i);
 <details>
 <summary>Solution</summary>
 
-1. $S = \left\\{1, 2, 4\right\\}$ sont appelables. 
+1. $S = \left\{1, 2, 4\right\}$ sont appelables. 
    - 3 : types différents déduits pour `T` (`double*` et `int`)
    - 5 : pas de conversion `double*` vers `int`
    - 6 : pas de conversion `double*` vers `int*`
 2. Paramètres 
-   - $P_{1} = \left\\{1, 2, 4\right\\}$ par type exact
-   - $P_{2} = \left\\{1, 2, 4\right\\}$ par type exact
-3. $P_{1} \cap P_{2} = \left\\{1, 2, 4\right\\}$
+   - $P_{1} = \left\{1, 2, 4\right\}$ par type exact
+   - $P_{2} = \left\{1, 2, 4\right\}$ par type exact
+3. $P_{1} \cap P_{2} = \left\{1, 2, 4\right\}$
 4. fct no 2 : plus spécialisée que la 1<br>
    fct no 4 : plus spécialisée que la 1<br>
    pas d'ordre de spécialisation entre la 2 et la 4 => **appel ambigu**
@@ -304,15 +304,15 @@ fct(i, c);
 <details>
 <summary>Solution</summary>
 
-1. $S = \left\\{1, 4, 5\right\\}$ sont appelables. 
+1. $S = \left\{1, 4, 5\right\}$ sont appelables. 
    - 2 : pas de déduction pour `T* = int`
    - 3 : types différents déduits pour `T` (`int` et `char`)
    - 6 : pas de conversion `int` vers `int*`
 2. Paramètres 
-   - $P_{1} = \left\\{1, 4, 5\right\\}$ par type exact
-   - $P_{2} = \left\\{1\right\\}$ par type exact
+   - $P_{1} = \left\{1, 4, 5\right\}$ par type exact
+   - $P_{2} = \left\{1\right\}$ par type exact
      - 4 et 5 par promotion `char` vers `int` 
-3. $P_{1} \cap P_{2} = \left\\{1\right\\}$
+3. $P_{1} \cap P_{2} = \left\{1\right\}$
 4. **la fct no 1 est appelée**
 
 --------------------
@@ -327,15 +327,15 @@ fct(pc, pd);
 <details>
 <summary>Solution</summary>
 
-1. $S = \left\\{1, 2\right\\}$ sont appelables.
+1. $S = \left\{1, 2\right\}$ sont appelables.
    - 3 : types différents déduits pour `T` (`char*` et `double*`)
    - 4 : pas de conversion `double*` vers `int`
    - 5 : pas de conversion `char*` vers `int` ni `double*` vers `int`
    - 6 : pas de conversion `char*` vers `int*` ni `double*` vers `float`
 2. Paramètres
-   - $P_{1} = \left\\{1, 2\right\\}$ par type exact
-   - $P_{2} = \left\\{1, 2\right\\}$ par type exact
-3. $P_{1} \cap P_{2} = \left\\{1, 2\right\\}$
+   - $P_{1} = \left\{1, 2\right\}$ par type exact
+   - $P_{2} = \left\{1, 2\right\}$ par type exact
+3. $P_{1} \cap P_{2} = \left\{1, 2\right\}$
 4. fct no 2 : plus spécialisée que la 1 => **la fct no 2 est appelée**
 
 --------------------
@@ -350,15 +350,15 @@ fct(d, d);
 <details>
 <summary>Solution</summary>
 
-1. $S = \left\\{1, 3, 4, 5\right\\}$ sont appelables. 
+1. $S = \left\{1, 3, 4, 5\right\}$ sont appelables. 
    - 2 : pas de déduction pour `T* = double`
    - 6 : pas de conversion `double` vers `int*` 
 2. Paramètres
-   - $P_{1} = \left\\{1, 3, 4\right\\}$ par type exact
+   - $P_{1} = \left\{1, 3, 4\right\}$ par type exact
      - 5 par conversion `double` vers `int`
-   - $P_{2} = \left\\{1, 3\right\\}$ par type exact
+   - $P_{2} = \left\{1, 3\right\}$ par type exact
      - 4 et 5 par conversion `double` vers `int`
-3. $P_{1} \cap P_{2} = \left\\{1, 3\right\\}$
+3. $P_{1} \cap P_{2} = \left\{1, 3\right\}$
 4. fct no 3 : plus spécialisée que la 1 => **la fct no 3 est appelée**
 
 --------------------
@@ -392,15 +392,15 @@ fct(s+d, d);
 Pour l'expression `s+d`, le `short` est converti en `double` pour l'opération.<br>
 Au final, nous avons `f(double, double)`
 
-1. $S = \left\\{1, 3, 4, 5 \right\\}$ sont appelables. 
+1. $S = \left\{1, 3, 4, 5 \right\}$ sont appelables. 
    - 2 : pas de déduction pour `T* = double`
    - 6 : pas de conversion `double` vers `int*`
 3. Paramètres
-   - $P_{1} = \left\\{1, 3, 4\right\\}$ par type exact
+   - $P_{1} = \left\{1, 3, 4\right\}$ par type exact
      - 5 par conversion `double` vers `int`
-   - $P_{2} = \left\\{1, 3\right\\}$ par type exact
+   - $P_{2} = \left\{1, 3\right\}$ par type exact
      - 4 et 5 par conversion `double` vers `int`
-3. $P_{1} \cap P_{2} = \left\\{1, 3\right\\}$
+3. $P_{1} \cap P_{2} = \left\{1, 3\right\}$
 4. fct no 3 : plus spécialisée que la 1 => **la fct no 3 est appelée**
 
 --------------------
@@ -415,13 +415,13 @@ fct<>(i, i);
 <details>
 <summary>Solution</summary>
 
-1. $S = \left\\{1, 3, 4\right\\}$ sont appelables. 
+1. $S = \left\{1, 3, 4\right\}$ sont appelables. 
    - 2 : pas de déduction pour `T* = int`
    - 5 et 6 : fonctions non génériques pas appelables par `fct<>`
 2. Paramètres
-   - $P_{1} = \left\\{1, 3, 4\right\\}$ par type exact
-   - $P_{2} = \left\\{1, 3, 4\right\\}$ par type exact
-3. $P_{1} \cap P_{2} = \left\\{1, 3, 4\right\\}$
+   - $P_{1} = \left\{1, 3, 4\right\}$ par type exact
+   - $P_{2} = \left\{1, 3, 4\right\}$ par type exact
+3. $P_{1} \cap P_{2} = \left\{1, 3, 4\right\}$
 4. **Ambiguité** entre 3 et 4, qui ne sont pas plus spécialisées l'une que l'autre
 --------------------
 
@@ -435,14 +435,14 @@ fct<>(c, c);
 <details>
 <summary>Solution</summary>
 
-1. $S = \left\\{1, 3, 4\right\\}$ sont appelables. 
+1. $S = \left\{1, 3, 4\right\}$ sont appelables. 
    - 2 : pas de déduction pour `T* = char`
    - 5 et 6 : fonctions non génériques
 2. Paramètres
-   - $P_{1} = \left\\{1, 3, 4\right\\}$ par type exact
-   - $P_{2} = \left\\{1, 3\right\\}$ par type exact
+   - $P_{1} = \left\{1, 3, 4\right\}$ par type exact
+   - $P_{2} = \left\{1, 3\right\}$ par type exact
      - 4 par promotion `char` vers `int`
-3. $P_{1} \cap P_{2} = \left\\{1, 3\right\\}$
+3. $P_{1} \cap P_{2} = \left\{1, 3\right\}$
 4. fct no 3 : plus spécialisée que la 1 => **la fct no 3 est appelée**
 
 --------------------
@@ -457,16 +457,16 @@ fct<int>(d, d);
 <details>
 <summary>Solution</summary>
 
-1. $S = \left\\{1, 3, 4\right\\}$ sont appelables.
+1. $S = \left\{1, 3, 4\right\}$ sont appelables.
    - 1 : la fonction est `fct(int,double)`
    - 2 : pas de conversion `double` vers `int*`
    - 3 : la fonction est `fct(int,int)`
    - 4 : la fonction est `fct(int,int)`
 2. Paramètres
-   - $P_{1} = \left\\{1, 3, 4\right\\}$ par conversion `double` vers `int`
-   - $P_{2} = \left\\{1\right\\}$ par type exact
+   - $P_{1} = \left\{1, 3, 4\right\}$ par conversion `double` vers `int`
+   - $P_{2} = \left\{1\right\}$ par type exact
      	- 3 ou 4 par conversion  `double` vers `int`
-3. $P_{1} \cap P_{2} = \left\\{1\right\\}$
+3. $P_{1} \cap P_{2} = \left\{1\right\}$
 4. **la fct no 1 est appelée**
 
 --------------------
@@ -481,16 +481,16 @@ fct<char>(d, c);
 <details>
 <summary>Solution</summary>
 
-1. $S = \left\\{1, 3, 4\right\\}$ sont appelables. 
+1. $S = \left\{1, 3, 4\right\}$ sont appelables. 
    - 1 : `T=char` spécifié, `U=char` déduit : `f(char, char)`
    - 2 : pas de conversion `double` vers `char*`
    - 3 : fonction: `f(char, char)`
    - 4 : fonction: `f(char, int)`
 2. Paramètres
-   - $P_{1} = \left\\{1, 3, 4\right\\}$ par conversion `double` vers `char`
-   - $P_{2} = \left\\{1, 3\right\\}$ par type exact
+   - $P_{1} = \left\{1, 3, 4\right\}$ par conversion `double` vers `char`
+   - $P_{2} = \left\{1, 3\right\}$ par type exact
      - 4 par promotion `char` vers `int`
-3. $P_{1} \cap P_{2} = \left\\{1, 3\right\\}$
+3. $P_{1} \cap P_{2} = \left\{1, 3\right\}$
 4. 3 est plus spécialisée que 1, **la fct no 3 est appelée**
 
 --------------------

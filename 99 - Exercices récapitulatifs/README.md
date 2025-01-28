@@ -228,6 +228,9 @@ int fct(i, d);
 
 
 - 02-06 :
+![surchargeSpec](images/surchargeSpec.PNG)
+
+en gros la même méthode que pour les surcharge, mais si ambiguité on prend la plus spécialisée (si autant de spec, ambigu)
 
 - 03-02 :
 
@@ -238,23 +241,57 @@ int fct(i, d);
     - 03-05 Trace
     - 04-02 Surchage des operateurs
     - 06-03 Voitures - compilation separee
+
+*Notes*
+
+- 03-02 :
+- 03-05 :
+- 04-02 :
+- 06-03 :
+
 - **12 - iterator - algorithm - numeric**
     - 03-01 - algorithm - sans modification
     - 03-02 - nbre valeurs dans intervalle
     - 03-05 - algorithm - avec modification
+
+*Notes*
+
+- 03-01 :
+- 03-02 :
+- 03-05 :
+
 - **13 - classe generique**
     - 01-02 - classe Point
     - 01-06 - classe Stack
     - 01-10 - classe Stack - specialisation
     - 02-02 - type generique - screen
     - 03-02 - classe Coord - concept
+
+*Notes*
+
+- 03-02
+
 - **14 - Gestion des erreurs**
     - 03-01 try-catch
     - 05-01 terminaison de programme 1
     - 05-02 terminaison de programme 2
     - 05-03 terminaison de programme 3
+
+*Notes*
+
+- 03-01 :
+- 05-01 :
+- 05-02 :
+- 05-03 :
+
 - **15 - Allocation dynamique**
     - 01-01 new et delete
     - 01-02 operator new
     - 03-04 classe Tab
+
+*Notes*
+
+- 01-01 :
+- 01-02 :
+- 03-04 :
     
