@@ -90,10 +90,11 @@ A FAIRE pour entrainement 0202
 - 03-02 : on peut cast un type t.q. (double) opération → on a un double en sortie.
 - 04-02 : unsigned ne peut pas représenter les nb négatifs → overflow repart à 0, mais signed → indéfini si ovf
 
-- conversion ; certains types peuvent être promus tel que la chart ci-dessous :
-![conversion](images/conversion.PNG)
+- promotion ; certains types peuvent être promus tel que la chart ci-dessous :
+![promotion](images/conversion.PNG)
 Noter que le type de la colonne peut être promu quand il y a une checkmark dans la ligne.
 i.e. char peut promote en tout, alors que short ne sera pas promu en char car il est +grand.
+De plus, cette image ne prend pas en compte la conversion qui sera traitée plus bas.
 
 - **07 - Structure_Enum**
     - 01-03 - acces_membres
