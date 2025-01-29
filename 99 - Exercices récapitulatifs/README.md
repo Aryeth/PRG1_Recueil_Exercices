@@ -369,3 +369,76 @@ runtime_error --> range_error
 - 03-04 :
     
 à revoir, exercices
+
+*Notes supplémentaires des exercices*
+
+- Assert(bool) de <cassert> :
+ 
+Permet de checker une condition; lève une exception et termine le programme si cette exception est fausse.
+
+Exemple :
+~~~cpp
+#include <cassert>
+using namespace std;
+
+int main(){
+    assert(1!=1);
+    return 0;
+}
+~~~
+
+- **Surcharger les opérateurs** (exemples) :
+
+- operator[] (besoin d'être dans la classe)
+
+~~~cpp
+int& operator[](size_t i){
+        if (i == 0) return this->x;
+        else if (i == 1) return this->y;
+        else if (i == 2) return this->z;
+        else throw out_of_range("Index must be 0, 1, or 2.");
+    }
+
+int operator[](size_t i) const{
+    if (i == 0) return this->x;
+    else if (i == 1) return this->y;
+    else if (i == 2) return this->z;
+    else throw out_of_range("Index must be 0, 1, or 2.");
+}
+~~~
+Le premier permet de modifier les valeurs (pour ça qu'on utilise int&);
+
+Le deuxième permet d'accèder aux valeurs (pour ça que la fonction est const ! on ne modifie rien)
+
+:)
+
+- operator+ (besoin d'être dans la classe)
+
+~~~cpp
+Vec3 operator+(const Vec3& other) const {
+        return Vec3(x + other.x, y + other.y, z + other.z);
+    }
+~~~
+Ici, le "other" est ce qu'on ajoute (à droite du +). 
+
+La partie à gauche du + est déjà prise en compte, car on est dans la classe.
+
+- operator+= (dans la classe)
+~~~cpp
+Vec3& operator+=(const Vec3& b) {
+x += b.x;
+y += b.y;
+z += b.z;
+return *this;
+}
+~~~
+Même raisonnements qu'avant, le x y et z ici sont le vec3 à gauche du +=;
+et le fait d'utiliser Vec3& nous permet de renvoyer le vecteur sur lequel on fait l'opération.
+
+On retourne enfin *this, qui est la valeur du vecteur sur lequel on travaille.
+
+- operator<< (en DEHORS de la classe)
+~~~cpp
+ostream& operator<<(ostream& os ,const Vec3& v){return os<<"("<<v.getX()<<","<<v.getY()<<","<<v.getZ()<<")";}
+~~~
+La syntaxe est à retenir ; possible de retrouver en essayant de compiler sans la surcharge
